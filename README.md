@@ -282,7 +282,7 @@ Gagnepain, P., Henson, R. N., & Davis, M. H. (2012). Temporal predictive codes f
 <img src= './Figures/PCTI/Structure.png' width= 20% height= 20% />  
 
 * Equation  
-<img src= './Figures/PCTI/Equations.png' width= 30% height= 30% />
+    <img src= './Figures/PCTI/Equations.png' width= 30% height= 30% />
 
     * *i* is a phoneme. *j* is a word. *P* is activation of phoneme. *L* is activation of word. *t* is time step. *length(j)* is a function of word length. Ex) len(b^s) = 3.
     * Current parameters
