@@ -30,10 +30,11 @@ class Model:
         self.phoneme_List = []
         for pronunciation in self.pronunciation_Dict.values():
             self.phoneme_List.extend(pronunciation)
-        self.phoneme_List = list(set(self.phoneme_List))
+        self.phoneme_List = sorted(list(set(self.phoneme_List)), key = str.lower)
 
     def Test(self, phoneme_String):
-        probability_Dict = {}
+        probability_Dict = {} # stores probability distribution of phonemes at each time step
+        error_List = [] # stores prediction error at each time step
 
         probability_Dict[-1] = {x:0.0 for x in self.phoneme_List}
         new_Candidate_Word_List = []
@@ -61,7 +62,8 @@ class Model:
                             probability_Dict[index][phoneme] += 1 #self.frequency_Dict[word]
                             break
             sum_Frequency = np.sum([x for x in probability_Dict[index].values()])
-            probability_Dict[index] = {phoneme: probability_Dict[index][phoneme] / sum_Frequency for phoneme in self.phoneme_List}            
+            if sum_Frequency != 0:
+                probability_Dict[index] = {phoneme: probability_Dict[index][phoneme] / sum_Frequency for phoneme in self.phoneme_List}            
             candidate_Word_List = new_Candidate_Word_List
 
         new_Fig = plt.figure(figsize=(7 * np.minimum(2, len(probability_Dict)), 3 * np.ceil(len(probability_Dict) / 2)))
@@ -73,14 +75,25 @@ class Model:
                     error += np.abs(1 - probability_Dict[index][predicted_Phoneme])
                 else:
                     error += np.abs(0 - probability_Dict[index][predicted_Phoneme])
+            
+            error_List.append(error)
+            
             probability_List = [probability_Dict[index][phoneme] for phoneme in self.phoneme_List]
 
             plt.subplot(int(np.ceil(len(probability_Dict) / 2)), np.minimum(2, len(probability_Dict)), index + 2)
             plt.bar(self.phoneme_List, probability_List)
-            plt.title("Input: {}     Location: {}    Error: {}".format(phoneme_String, index, error))
+            plt.title("Input: {}     Time Step: {}    Error: {}".format(phoneme_String, index, error))
             plt.draw()
         plt.tight_layout()
         plt.show()
+
+        fig = plt.figure(figsize=(7, 7))
+        plt.xticks(np.arange(len(phoneme_String)), list(phoneme_String))
+        plt.plot(error_List[0:len(phoneme_String)], 'ro-')
+        plt.ylim((0, 2.5))
+        plt.xlabel("Input at Each Time Step")
+        plt.ylabel("Prediction Error")
+        plt.draw()
 
 if __name__ == '__main__':
     new_Model = Model()

@@ -2,7 +2,6 @@
 Implementation of several predictive coding models
 
 # Gagnepain 2012
-__※To Monica: I think you have a bug fix version. Please modify the ['L67-L83'](./Gagnepain2012/Gagnepain2012.py#L67-L83) section to match your bug fix version.__
 
 ```
 Gagnepain, P., Henson, R. N., & Davis, M. H. (2012). Temporal predictive codes for spoken words in auditory cortex. Current Biology, 22(7), 615-621.
@@ -43,6 +42,7 @@ Gagnepain, P., Henson, R. N., & Davis, M. H. (2012). Temporal predictive codes f
 
     * Result example  
     <img src= './Figures/Gagnepain2012.Example.png' width= 50% height= 50% />
+    <img src= './Figures/Gagnepain2012.Error.Example.png' width= 50% height= 50% />
         
 # SRN
 
