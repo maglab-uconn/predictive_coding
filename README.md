@@ -206,3 +206,6 @@ Gagnepain, P., Henson, R. N., & Davis, M. H. (2012). Temporal predictive codes f
             * The list of phoneme string which you want to test
 
         * Result file is `'./Result/Result_Data.txt'`.
+        
+# TRACE
+Trace simulations were conducted in C (available at http://magnuson.psy.uconn.edu/wp-content/uploads/sites/1140/2015/01/ctrace.zip). Code used for simulations is forthcoming.
