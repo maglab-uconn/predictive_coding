@@ -78,7 +78,7 @@ Gagnepain, P., Henson, R. N., & Davis, M. H. (2012). Temporal predictive codes f
             * 'ELP_groupData.csv' is an example
         * `additional_Lexicon_File`
             * Lexicon assuming further learning
-            * 'Novel_Lexicon.csv' is an example
+            * 'Novel_Lexicon_1.csv' is an example
         * `weight_File`
             * If you want load a pre-trained weight file, set the weight path
             * If not, set 'None'
