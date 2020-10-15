@@ -107,7 +107,7 @@ Gagnepain, P., Henson, R. N., & Davis, M. H. (2012). Temporal predictive codes f
         * `test_Pronunciation`
             * Determine one phoneme string will be tested While training.
 
-5. Train additional lexicion
+5. Train additional lexicon
     ```
     new_Model.Train(
         learning_Rate= <float>,
