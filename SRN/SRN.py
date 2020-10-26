@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 plt.style.use('ggplot')
 import _pickle as pickle
 import os
+from tqdm import tqdm
 
 class String_to_Pattern:
     def __init__(self, index_Dict):
@@ -23,11 +24,7 @@ def Sigmoid(x):
 
 #Define Softmax
 def Softmax(x):
-    return np.exp(x) / np.sum(np.exp(x), axis = 1, keepdims=True)    
-
-#Define Tanh
-def Tanh(x):
-    return np.tanh(x)
+    return np.exp(x) / np.sum(np.exp(x), axis = 1, keepdims=True)
 
 #Define MSE
 def MSE(target_Pattern, output_Activation):    
@@ -39,12 +36,14 @@ class Model:
         hidden_Unit,
         output_Function,
         lexicon_File,
+        use_Frequency = False,
         additional_Lexicon_File = None,
         weight_File = None
         ):
-        self.hidden_Unit = hidden_Unit        
-        self.output_Function = output_Function        
+        self.hidden_Unit = hidden_Unit
+        self.output_Function = output_Function
         self.lexicon_File = lexicon_File
+        self.use_Frequency = use_Frequency
         self.additional_Lexicon_File = additional_Lexicon_File
         
         self.Pattern_Generate()
@@ -55,8 +54,18 @@ class Model:
             readLines = f.readlines()[1:]
         splited_ReadLine = [readLine.replace('"','').strip().split(",")[1:] for readLine in readLines]
         
-        self.word_Index_Dict = {word.lower(): index for index, (word, _, _, _, _) in enumerate(splited_ReadLine)}
-        self.pronunciation_Dict = {word.lower(): pronunciation for word, pronunciation, _, _, _ in splited_ReadLine}
+        self.word_Index_Dict = {
+            word.lower(): index
+            for index, (word, _, _, _, _) in enumerate(splited_ReadLine)
+            }
+        self.pronunciation_Dict = {
+            word.lower(): pronunciation
+            for word, pronunciation, _, _, _ in splited_ReadLine
+            }
+        self.frequency_Dict = {
+            word.lower(): (float(frequency) * 0.05 + 0.1)
+            if self.use_Frequency else 1 for word, _, _, frequency, _ in splited_ReadLine
+            }
         self.index_Word_Dict = {index: word for word, index in self.word_Index_Dict.items()}
 
         if self.additional_Lexicon_File is not None:
@@ -64,9 +73,22 @@ class Model:
                 readLines = f.readlines()[1:]
             splited_ReadLine = [readLine.replace('"','').strip().split(",")[1:] for readLine in readLines]
 
-            self.additional_Word_Index_Dict = {word.lower(): index for index, (word, _, _, _, _) in enumerate(splited_ReadLine)}
-            self.additional_Pronunciation_Dict = {word.lower(): pronunciation for word, pronunciation, _, _, _ in splited_ReadLine}
-            self.additional_Index_Word_Dict = {index: word for word, index in self.additional_Word_Index_Dict.items()}
+            self.additional_Word_Index_Dict = {
+                word.lower(): index
+                for index, (word, _, _, _, _) in enumerate(splited_ReadLine)
+                }
+            self.additional_Pronunciation_Dict = {
+                word.lower(): pronunciation
+                for word, pronunciation, _, _, _ in splited_ReadLine
+                }
+            self.additional_Frequency_Dict = {
+                word.lower(): (float(frequency) * 0.05 + 0.1)
+                if self.use_Frequency else 1 for word, _, _, frequency, _ in splited_ReadLine
+                }
+            self.additional_Index_Word_Dict = {
+                index: word
+                for word, index in self.additional_Word_Index_Dict.items()
+                }
 
         self.phoneme_List = []
         for pronunciation in self.pronunciation_Dict.values():
@@ -102,48 +124,58 @@ class Model:
         print("Bias Matrix H shape:", self.weight_Dict["Bias", "H"].shape)
         print("Bias Matrix O shape:", self.weight_Dict["Bias", "O"].shape)
         
-    def Train(self, learning_Rate, max_Epoch, epoch_Batch_Size, mode="Normal", test_Pronunciation = 'fOrmj@l@'):
-        if not os.path.exists(os.getcwd().replace("\\", "/") + "/Result/Weight"):
-            os.makedirs(os.getcwd().replace("\\", "/") + "/Result/Weight")
-
+    def Train(self, learning_Rate, max_Epoch, epoch_Batch_Size, mode="Normal", test_Pronunciation = 'fOrmj@l@', initial_Epoch= 0, tag= None):
         if mode == "Normal":
             word_Index_Dict = self.word_Index_Dict
             index_Word_Dict = self.index_Word_Dict
             pronunciation_Dict = self.pronunciation_Dict
+            frequency_Dict = self.frequency_Dict
         elif mode == "Addition":
             word_Index_Dict = self.additional_Word_Index_Dict
             index_Word_Dict = self.additional_Index_Word_Dict
             pronunciation_Dict = self.additional_Pronunciation_Dict
-        elif mode == "Both":            
+            frequency_Dict = self.additional_Frequency_Dict
+        elif mode == "Both":
             word_Index_Dict = {key: value for key, value in self.word_Index_Dict.items()}
             word_Index_Dict.update({key: value + len(word_Index_Dict) for key, value in self.additional_Word_Index_Dict.items()})
             index_Word_Dict = {index: word for word, index in word_Index_Dict.items()}
             pronunciation_Dict = {key: value for key, value in self.pronunciation_Dict.items()}
             pronunciation_Dict.update(self.additional_Pronunciation_Dict)
+            frequency_Dict = {key: value for key, value in self.frequency_Dict.items()}
+            frequency_Dict.update(self.additional_Frequency_Dict)
         else:
             raise Exception("Unsupported mode")
 
-        max_Cycle = np.sum([len(pronunciation) for pronunciation in pronunciation_Dict.values()]) - 1
-
-        for start_Epoch in range(0, max_Epoch, epoch_Batch_Size):
+        for start_Epoch in range(initial_Epoch, max_Epoch, epoch_Batch_Size):
             print("{} - {} Pattern string generating".format(start_Epoch, min(max_Epoch, start_Epoch + epoch_Batch_Size)))
             pattern_String_List = []
             for batch_Index in range(start_Epoch, min(max_Epoch, start_Epoch + epoch_Batch_Size)):
                 #Training order shuffle
                 training_Index_List = list(range(len(word_Index_Dict)))
                 shuffle(training_Index_List)
-                new_All_Pattern_String = "".join([pronunciation_Dict[index_Word_Dict[index]] for index in training_Index_List])                
+                new_All_Pattern_String = "".join([
+                    pronunciation_Dict[index_Word_Dict[index]]
+                    for index in training_Index_List
+                    if frequency_Dict[index_Word_Dict[index]] > np.random.rand()
+                    ])
                 pattern_String_List.append(new_All_Pattern_String)
-                
+
             context_Activation = np.zeros((len(pattern_String_List), self.hidden_Unit))
-            for cycle in range(max_Cycle):
-                input_Pattern_List, target_Pattern_List = zip(*[(pattern_String[cycle], pattern_String[cycle + 1]) for pattern_String in pattern_String_List])                
+            cycles = tqdm(range(max([len(x) for x in pattern_String_List]) - 1))
+            for cycle in cycles:
+                indices, input_Pattern_List, target_Pattern_List = zip(*[
+                    (index, pattern_String[cycle], pattern_String[cycle + 1])
+                    for index, pattern_String in enumerate(pattern_String_List)
+                    if len(pattern_String) > cycle + 1
+                    ])
+                indices = list(indices) #In numpy, indexings by list and tuple are different.
+
                 input_Pattern = self.string_to_Pattern.Get_Pattern(input_Pattern_List)
-                target_Pattern = self.string_to_Pattern.Get_Pattern(target_Pattern_List)                
+                target_Pattern = self.string_to_Pattern.Get_Pattern(target_Pattern_List)
                 #Forward
-                hidden_Activation = Tanh(
+                hidden_Activation = np.tanh(
                     np.dot(input_Pattern, self.weight_Dict["Weight", "IH"]) + 
-                    np.dot(context_Activation, self.weight_Dict["Weight", "CH"]) + 
+                    np.dot(context_Activation[indices], self.weight_Dict["Weight", "CH"]) + 
                     self.weight_Dict["Bias", "H"])
                 
                 output_Activation = self.output_Function(np.dot(hidden_Activation, self.weight_Dict["Weight", "HO"]) + self.weight_Dict["Bias", "O"])
@@ -154,27 +186,30 @@ class Model:
                 output_Error  = target_Pattern - output_Activation
                 if self.output_Function == Sigmoid:
                     output_Error *= output_Activation * (1 - output_Activation)
-                elif self.output_Function == Tanh:
+                elif self.output_Function == np.tanh:
                     output_Error *= (1 - output_Activation ** 2)
                 hidden_Error = np.dot(output_Error, np.transpose(self.weight_Dict["Weight", "HO"])) * (1 - hidden_Activation ** 2)
                
                 #Weight renew
                 self.weight_Dict["Weight", "IH"] += learning_Rate * np.dot(np.transpose(input_Pattern), hidden_Error)
-                self.weight_Dict["Weight", "CH"] += learning_Rate * np.dot(np.transpose(context_Activation), hidden_Error)
+                self.weight_Dict["Weight", "CH"] += learning_Rate * np.dot(np.transpose(context_Activation[indices]), hidden_Error)
                 self.weight_Dict["Weight", "HO"] += learning_Rate * np.dot(np.transpose(hidden_Activation), output_Error)
                 self.weight_Dict["Bias", "H"] += learning_Rate * np.sum(hidden_Error, axis=0, keepdims=True)
                 self.weight_Dict["Bias", "O"] += learning_Rate * np.sum(output_Error, axis=0, keepdims=True)
 
                 #Context renew
-                context_Activation = hidden_Activation
+                context_Activation[indices] = hidden_Activation
 
-                print("Mode: {}    Epoch: {} - {}    Cycle: {}    MSE: {}".format(mode, start_Epoch, min(max_Epoch, start_Epoch + epoch_Batch_Size), cycle, mse))
+                cycles.set_description('MSE: {:.5f}'.format(mse))
 
-            with open(os.getcwd().replace("\\", "/") + "/Result/Weight/Weight.M_{}.E_{}.pickle".format(mode, min(max_Epoch, start_Epoch + epoch_Batch_Size)), "wb") as f:
+            path = os.path.join('Result', 'Use_Frequency' if self.use_Frequency else 'Non_Frequency', 'Weight', 'Weight.M_{}.E_{}{}.pickle'.format(mode, min(max_Epoch, start_Epoch + epoch_Batch_Size), tag or ''))
+            os.makedirs(os.path.dirname(path), exist_ok= True)
+
+            with open(path, "wb") as f:
                 pickle.dump(self.weight_Dict, f, protocol=2)
-            self.Test(test_Pronunciation, file_Suffix=".M_{}.E_{}".format(mode, min(max_Epoch, start_Epoch + epoch_Batch_Size)))
+            self.Test_Plot(test_Pronunciation, file_Suffix=".M_{}.E_{}{}".format(mode, min(max_Epoch, start_Epoch + epoch_Batch_Size), tag or ''))
             
-    def Test(self, pronunciation, file_Suffix=""):
+    def Test_Plot(self, pronunciation, file_Suffix=""):
         gagnepain_Error_List = []
         mse_List = []
         output_Activation_List = []
@@ -184,7 +219,7 @@ class Model:
             input_Pattern = self.string_to_Pattern.Get_Pattern([pronunciation[cycle]])
             target_Pattern = self.string_to_Pattern.Get_Pattern([pronunciation[cycle + 1]])                
             #Forward
-            hidden_Activation = Tanh(
+            hidden_Activation = np.tanh(
                 np.dot(input_Pattern, self.weight_Dict["Weight", "IH"]) + 
                 np.dot(context_Activation, self.weight_Dict["Weight", "CH"]) + 
                 self.weight_Dict["Bias", "H"])
@@ -218,16 +253,16 @@ class Model:
         context_Activation = initial_Context if not initial_Context is None else np.random.rand(1, self.hidden_Unit)
         for cycle in range(len(pronunciation) - 1):            
             input_Pattern = self.string_to_Pattern.Get_Pattern([pronunciation[cycle]])
-            target_Pattern = self.string_to_Pattern.Get_Pattern([pronunciation[cycle + 1]])                
+            target_Pattern = self.string_to_Pattern.Get_Pattern([pronunciation[cycle + 1]])
             #Forward
             ih_Stroage = np.dot(input_Pattern, self.weight_Dict["Weight", "IH"])
             ch_Stroage = np.dot(context_Activation, self.weight_Dict["Weight", "CH"])
-            hidden_Activation = Tanh(
+            hidden_Activation = np.tanh(
                 ih_Stroage + 
                 ch_Stroage + 
                 self.weight_Dict["Bias", "H"])
             ho_Stroage = np.dot(hidden_Activation, self.weight_Dict["Weight", "HO"])
-            output_Activation = self.output_Function(ho_Stroage + self.weight_Dict["Bias", "O"])            
+            output_Activation = self.output_Function(ho_Stroage + self.weight_Dict["Bias", "O"])
 
             #Error calculate
             gagnepain_Error = np.sum(np.abs(target_Pattern - output_Activation))
@@ -249,12 +284,7 @@ class Model:
         return gagnepain_Error_List, mse_List, ih_Stroage_List, ch_Stroage_List, ho_Stroage_List, context_Activation_List, hidden_Activation_List, output_Activation_List
 
     def Display_Result_Graph(self, pronunciation, mse_List, output_Activation_List, suffix=""):
-        if not os.path.exists(os.getcwd().replace("\\", "/") + "/Result/MSE_Plot"):
-            os.makedirs(os.getcwd().replace("\\", "/") + "/Result/MSE_Plot")
-        if not os.path.exists(os.getcwd().replace("\\", "/") + "/Result/Activation_Plot"):
-            os.makedirs(os.getcwd().replace("\\", "/") + "/Result/Activation_Plot")
-
-        fig = plt.figure(figsize=(6, 6))        
+        fig = plt.figure(figsize=(6, 6))
         plt.plot(mse_List)
         plt.title("MSE Flow    Pronunciation: {}".format(pronunciation))
         plt.xlabel('Cycle')
@@ -262,10 +292,9 @@ class Model:
         plt.gca().set_xticks(range(len(pronunciation) - 1))
         plt.gca().set_xticklabels(["{}({})".format(index, phoneme) for index, phoneme in enumerate(pronunciation[1:])])
         plt.gca().set_ylim([0, 1])
-        plt.savefig(
-            os.getcwd().replace("\\", "/") + "/Result/MSE_Plot/MSE{}.png".format(suffix),
-            bbox_inches='tight'
-            )
+        path = os.path.join('Result', 'Use_Frequency' if self.use_Frequency else 'Non_Frequency', 'MSE_Plot', 'MSE{}.png'.format(suffix))
+        os.makedirs(os.path.dirname(path), exist_ok= True)
+        plt.savefig(path, bbox_inches='tight')
         plt.close(fig)
 
         fig = plt.figure(figsize=(10, 10))
@@ -286,10 +315,9 @@ class Model:
         plt.gca().set_yticklabels(self.phoneme_List)
         plt.title("Phoneme Activation Flow    Pronunciation: {}".format(pronunciation))
         plt.colorbar()
-        plt.savefig(
-            os.getcwd().replace("\\", "/") + "/Result/Activation_Plot/Activation{}.png".format(suffix),
-            bbox_inches='tight'
-            )
+        path = os.path.join('Result', 'Use_Frequency' if self.use_Frequency else 'Non_Frequency', 'Activation_Plot', 'Activation{}.png'.format(suffix))
+        os.makedirs(os.path.dirname(path), exist_ok= True)
+        plt.savefig(path, bbox_inches='tight')
         plt.close(fig)
 
 def List_Test(pre_Model, post_Model, phoneme_List):
@@ -299,7 +327,7 @@ def List_Test(pre_Model, post_Model, phoneme_List):
             word, original, novel, nonword  = readLine.strip().split("\t") 
             word_Dict[word, "Original"] = original
             word_Dict[word, "Novel"] = novel
-            word_Dict[word, "Nonword"] = nonword        
+            word_Dict[word, "Nonword"] = nonword
 
     column_Name_List = [
         "Position",
@@ -343,7 +371,7 @@ def List_Test(pre_Model, post_Model, phoneme_List):
                 new_Line.append(str(np.sum(ho_Stroage_List[position][0])))
                 new_Line.append(str(np.sum(context_Activation_List[position][0])))
                 new_Line.append(str(np.sum(hidden_Activation_List[position][0])))
-                new_Line.append(str(np.sum(np.abs(hidden_Activation_List[position][0]))))                
+                new_Line.append(str(np.sum(np.abs(hidden_Activation_List[position][0]))))
                 new_Line.append(str(np.sum(output_Activation_List[position][0])))
                 extract_List.append("\t".join(new_Line))
 
@@ -353,14 +381,14 @@ def List_Test(pre_Model, post_Model, phoneme_List):
         f.write("\n".join(extract_List))
 
 if __name__ == "__main__":
-    #new_SRN_Model = SRN_Model(
-    #    hidden_Unit=200,
-    #    output_Function=Softmax,    #Function is first-class object
-    #    lexicon_File='ELP_groupData.csv',
-    #    additional_Lexicon_File='Novel_Lexicon.csv',        
-    #    weight_File=os.getcwd().replace("\\", "/") + "/Result/Weight/Weight.M_Normal.E_10000.pickle"
-    #    )
-    #new_SRN_Model.Training(learning_Rate=0.0001, max_Epoch = 100, epoch_Batch_Size=10, mode="Addition", test_Pronunciation='fOrmj@bo')
+    new_SRN_Model = Model(
+       hidden_Unit=200,
+       output_Function=Softmax,    #Function is first-class object
+       lexicon_File='ELP_groupData.csv',
+       additional_Lexicon_File='Novel_Lexicon.csv',
+       weight_File=os.getcwd().replace("\\", "/") + "/Result/Weight/Weight.M_Normal.E_10000.pickle"
+       )
+    new_SRN_Model.Training(learning_Rate=0.0001, max_Epoch = 100, epoch_Batch_Size=10, mode="Addition", test_Pronunciation='fOrmj@bo')
 
 
     pre_SRN_Model = Model(
