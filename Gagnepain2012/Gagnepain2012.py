@@ -62,6 +62,7 @@ class Model:
 
     def Test(self, phoneme_String, label= None, display_Plot= False):
         probability_Dict = {} # stores probability distribution of phonemes at each time step
+        
         error_List = [] # stores prediction error at each time step
 
         probability_Dict[-1] = {x:0.0 for x in self.phoneme_List}
@@ -132,7 +133,13 @@ class Model:
             plt.ylabel("Prediction Error")
             plt.draw()
 
-        return error_List[0:len(phoneme_String)]
+
+        probability_List = [
+            probability_Dict[index][phoneme]
+            for index, phoneme in enumerate(phoneme_String, -1)
+            ]
+        
+        return probability_List, error_List[0:len(phoneme_String)]
 
 if __name__ == '__main__':
     new_Model = Model()
