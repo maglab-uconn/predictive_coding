@@ -65,6 +65,7 @@ class Model:
         
         error_List = [] # stores prediction error at each time step
 
+        uniqueness_Point = None
         probability_Dict[-1] = {x:0.0 for x in self.phoneme_List}
         new_Candidate_Word_List = []
         for word in self.word_Index_Dict.keys():
@@ -78,8 +79,9 @@ class Model:
         probability_Dict[-1] = {phoneme: probability_Dict[-1][phoneme] / sum_Frequency for phoneme in self.phoneme_List}
         candidate_Word_List = new_Candidate_Word_List
 
-
         for index, (test_Phoneme, test_Sub_String) in enumerate(zip(phoneme_String, Sub_Pronunciation_Generate(phoneme_String))):    #c, ca, cas, cast
+            if uniqueness_Point is None and len(candidate_Word_List) == 1:
+                uniqueness_Point = index + 1
             probability_Dict[index] = {x:0.0 for x in self.phoneme_List}
             new_Candidate_Word_List = []
             for word in candidate_Word_List:
@@ -139,9 +141,12 @@ class Model:
             for index, phoneme in enumerate(phoneme_String, -1)
             ]
         
-        return probability_List, error_List[0:len(phoneme_String)]
+        uniqueness_Point = uniqueness_Point or len(phoneme_String) + 1
+
+        return probability_List, error_List[0:len(phoneme_String)], uniqueness_Point
 
 if __name__ == '__main__':
     new_Model = Model()
-    new_Model.Test("fOrmj@l@")
+    new_Model.Test("fOrm#li")
+    new_Model.Test("fOrm#")
     input()
