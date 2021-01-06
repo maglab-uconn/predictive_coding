@@ -1,0 +1,16 @@
+#ORIG	non1	non2	po	p1	p2
+xbrxpt	xbrxgs	xbrxlt	p	g	l
+artxst	artxda	artxpi	s	d	p
+karpxt	karpus	karpil	x	u	i
+kruhxl	kruhat	kruhig	x	a	i
+palxsi	palxbu	palxri	s	b	r
+parhxl	parhut	parhab	x	u	a
+partli	partkx	partba	l	k	b
+pradus	pradig	pradxp	u	i	x
+sxksid	sxksxl	sxksap	i	x	a
+sikrxt	sikrus	sikrib	x	u	i
+stxdid	stxdxr	stxdal	i	x	a
+stupxd	stupuk	stupir	x	u	i
+targxt	targil	targar	x	i	a
+trxbxl	trxbut	trxbig	x	u	i
+trxsti	trxsrx	trxsba	t	r	b

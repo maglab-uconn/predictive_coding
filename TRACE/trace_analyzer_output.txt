@@ -1,0 +1,540 @@
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=p -actual=g cTRACE/data_trace_ghd_set1.orig/QxbrxgsQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=p -actual=l cTRACE/data_trace_ghd_set1.orig/QxbrxlbQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=p -actual=p cTRACE/data_trace_ghd_set1.orig/QxbrxptQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set1.orig/QxbrxgsQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set1.orig/QxbrxlbQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set1.orig/QxbrxptQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=xbrxpt -train=NA -stim=xbrxgs cTRACE/data_trace_ghd_set1.orig/QxbrxgsQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=xbrxpt -train=NA -stim=xbrxlb cTRACE/data_trace_ghd_set1.orig/QxbrxlbQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=xbrxpt -train=NA -stim=xbrxpt cTRACE/data_trace_ghd_set1.orig/QxbrxptQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=p -actual=g cTRACE/data_trace_ghd_set1.train/QxbrxgsQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=p -actual=l cTRACE/data_trace_ghd_set1.train/QxbrxlbQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=p -actual=p cTRACE/data_trace_ghd_set1.train/QxbrxptQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set1.train/QxbrxgsQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set1.train/QxbrxlbQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set1.train/QxbrxptQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=xbrxpt -train=xbrxgs -stim=xbrxgs cTRACE/data_trace_ghd_set1.train/QxbrxgsQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=xbrxpt -train=xbrxgs -stim=xbrxlb cTRACE/data_trace_ghd_set1.train/QxbrxlbQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=xbrxpt -train=xbrxgs -stim=xbrxpt cTRACE/data_trace_ghd_set1.train/QxbrxptQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=s -actual=r cTRACE/data_trace_ghd_set1.orig/QartxrgQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=s -actual=h cTRACE/data_trace_ghd_set1.orig/QartxhaQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=s -actual=s cTRACE/data_trace_ghd_set1.orig/QartxstQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set1.orig/QartxrgQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set1.orig/QartxhaQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set1.orig/QartxstQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=artxst -train=NA -stim=artxrg cTRACE/data_trace_ghd_set1.orig/QartxrgQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=artxst -train=NA -stim=artxha cTRACE/data_trace_ghd_set1.orig/QartxhaQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=artxst -train=NA -stim=artxst cTRACE/data_trace_ghd_set1.orig/QartxstQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=s -actual=r cTRACE/data_trace_ghd_set1.train/QartxrgQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=s -actual=h cTRACE/data_trace_ghd_set1.train/QartxhaQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=s -actual=s cTRACE/data_trace_ghd_set1.train/QartxstQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set1.train/QartxrgQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set1.train/QartxhaQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set1.train/QartxstQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=artxst -train=artxrg -stim=artxrg cTRACE/data_trace_ghd_set1.train/QartxrgQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=artxst -train=artxrg -stim=artxha cTRACE/data_trace_ghd_set1.train/QartxhaQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=artxst -train=artxrg -stim=artxst cTRACE/data_trace_ghd_set1.train/QartxstQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=x -actual=u cTRACE/data_trace_ghd_set1.orig/QkarpusQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=x -actual=a cTRACE/data_trace_ghd_set1.orig/QkarpadQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set1.orig/QkarpxtQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set1.orig/QkarpusQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set1.orig/QkarpadQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set1.orig/QkarpxtQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=karpxt -train=NA -stim=karpus cTRACE/data_trace_ghd_set1.orig/QkarpusQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=karpxt -train=NA -stim=karpad cTRACE/data_trace_ghd_set1.orig/QkarpadQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=karpxt -train=NA -stim=karpxt cTRACE/data_trace_ghd_set1.orig/QkarpxtQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=x -actual=u cTRACE/data_trace_ghd_set1.train/QkarpusQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=x -actual=a cTRACE/data_trace_ghd_set1.train/QkarpadQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set1.train/QkarpxtQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set1.train/QkarpusQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set1.train/QkarpadQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set1.train/QkarpxtQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=karpxt -train=karpus -stim=karpus cTRACE/data_trace_ghd_set1.train/QkarpusQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=karpxt -train=karpus -stim=karpad cTRACE/data_trace_ghd_set1.train/QkarpadQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=karpxt -train=karpus -stim=karpxt cTRACE/data_trace_ghd_set1.train/QkarpxtQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=x -actual=a cTRACE/data_trace_ghd_set1.orig/QkruhatQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=x -actual=u cTRACE/data_trace_ghd_set1.orig/QkruhusQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set1.orig/QkruhxlQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set1.orig/QkruhatQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set1.orig/QkruhusQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set1.orig/QkruhxlQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=kruhxl -train=NA -stim=kruhat cTRACE/data_trace_ghd_set1.orig/QkruhatQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=kruhxl -train=NA -stim=kruhus cTRACE/data_trace_ghd_set1.orig/QkruhusQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=kruhxl -train=NA -stim=kruhxl cTRACE/data_trace_ghd_set1.orig/QkruhxlQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=x -actual=a cTRACE/data_trace_ghd_set1.train/QkruhatQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=x -actual=u cTRACE/data_trace_ghd_set1.train/QkruhusQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set1.train/QkruhxlQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set1.train/QkruhatQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set1.train/QkruhusQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set1.train/QkruhxlQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=kruhxl -train=kruhat -stim=kruhat cTRACE/data_trace_ghd_set1.train/QkruhatQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=kruhxl -train=kruhat -stim=kruhus cTRACE/data_trace_ghd_set1.train/QkruhusQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=kruhxl -train=kruhat -stim=kruhxl cTRACE/data_trace_ghd_set1.train/QkruhxlQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=s -actual=b cTRACE/data_trace_ghd_set1.orig/QpalxbuQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=s -actual=r cTRACE/data_trace_ghd_set1.orig/QpalxraQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=s -actual=s cTRACE/data_trace_ghd_set1.orig/QpalxsiQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set1.orig/QpalxbuQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set1.orig/QpalxraQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set1.orig/QpalxsiQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=palxsi -train=NA -stim=palxbu cTRACE/data_trace_ghd_set1.orig/QpalxbuQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=palxsi -train=NA -stim=palxra cTRACE/data_trace_ghd_set1.orig/QpalxraQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=palxsi -train=NA -stim=palxsi cTRACE/data_trace_ghd_set1.orig/QpalxsiQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=s -actual=b cTRACE/data_trace_ghd_set1.train/QpalxbuQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=s -actual=r cTRACE/data_trace_ghd_set1.train/QpalxraQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=s -actual=s cTRACE/data_trace_ghd_set1.train/QpalxsiQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set1.train/QpalxbuQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set1.train/QpalxraQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set1.train/QpalxsiQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=palxsi -train=palxbu -stim=palxbu cTRACE/data_trace_ghd_set1.train/QpalxbuQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=palxsi -train=palxbu -stim=palxra cTRACE/data_trace_ghd_set1.train/QpalxraQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=palxsi -train=palxbu -stim=palxsi cTRACE/data_trace_ghd_set1.train/QpalxsiQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=x -actual=u cTRACE/data_trace_ghd_set1.orig/QparhutQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=x -actual=i cTRACE/data_trace_ghd_set1.orig/QparhibQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set1.orig/QparhxlQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set1.orig/QparhutQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set1.orig/QparhibQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set1.orig/QparhxlQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=parhxl -train=NA -stim=parhut cTRACE/data_trace_ghd_set1.orig/QparhutQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=parhxl -train=NA -stim=parhib cTRACE/data_trace_ghd_set1.orig/QparhibQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=parhxl -train=NA -stim=parhxl cTRACE/data_trace_ghd_set1.orig/QparhxlQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=x -actual=u cTRACE/data_trace_ghd_set1.train/QparhutQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=x -actual=i cTRACE/data_trace_ghd_set1.train/QparhibQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set1.train/QparhxlQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set1.train/QparhutQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set1.train/QparhibQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set1.train/QparhxlQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=parhxl -train=parhut -stim=parhut cTRACE/data_trace_ghd_set1.train/QparhutQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=parhxl -train=parhut -stim=parhib cTRACE/data_trace_ghd_set1.train/QparhibQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=parhxl -train=parhut -stim=parhxl cTRACE/data_trace_ghd_set1.train/QparhxlQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=l -actual=k cTRACE/data_trace_ghd_set1.orig/QpartkxQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=l -actual=s cTRACE/data_trace_ghd_set1.orig/QpartsaQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=l -actual=l cTRACE/data_trace_ghd_set1.orig/QpartliQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set1.orig/QpartkxQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set1.orig/QpartsaQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set1.orig/QpartliQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=partli -train=NA -stim=partkx cTRACE/data_trace_ghd_set1.orig/QpartkxQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=partli -train=NA -stim=partsa cTRACE/data_trace_ghd_set1.orig/QpartsaQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=partli -train=NA -stim=partli cTRACE/data_trace_ghd_set1.orig/QpartliQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=l -actual=k cTRACE/data_trace_ghd_set1.train/QpartkxQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=l -actual=s cTRACE/data_trace_ghd_set1.train/QpartsaQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=l -actual=l cTRACE/data_trace_ghd_set1.train/QpartliQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set1.train/QpartkxQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set1.train/QpartsaQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set1.train/QpartliQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=partli -train=partkx -stim=partkx cTRACE/data_trace_ghd_set1.train/QpartkxQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=partli -train=partkx -stim=partsa cTRACE/data_trace_ghd_set1.train/QpartsaQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=partli -train=partkx -stim=partli cTRACE/data_trace_ghd_set1.train/QpartliQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=u -actual=i cTRACE/data_trace_ghd_set1.orig/QpradigQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=u -actual=x cTRACE/data_trace_ghd_set1.orig/QpradxlQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=u -actual=u cTRACE/data_trace_ghd_set1.orig/QpradusQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set1.orig/QpradigQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set1.orig/QpradxlQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set1.orig/QpradusQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=pradus -train=NA -stim=pradig cTRACE/data_trace_ghd_set1.orig/QpradigQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=pradus -train=NA -stim=pradxl cTRACE/data_trace_ghd_set1.orig/QpradxlQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=pradus -train=NA -stim=pradus cTRACE/data_trace_ghd_set1.orig/QpradusQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=u -actual=i cTRACE/data_trace_ghd_set1.train/QpradigQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=u -actual=x cTRACE/data_trace_ghd_set1.train/QpradxlQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=u -actual=u cTRACE/data_trace_ghd_set1.train/QpradusQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set1.train/QpradigQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set1.train/QpradxlQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set1.train/QpradusQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=pradus -train=pradig -stim=pradig cTRACE/data_trace_ghd_set1.train/QpradigQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=pradus -train=pradig -stim=pradxl cTRACE/data_trace_ghd_set1.train/QpradxlQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=pradus -train=pradig -stim=pradus cTRACE/data_trace_ghd_set1.train/QpradusQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=i -actual=x cTRACE/data_trace_ghd_set1.orig/QsxksxrQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=i -actual=a cTRACE/data_trace_ghd_set1.orig/QsxksapQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=i -actual=i cTRACE/data_trace_ghd_set1.orig/QsxksidQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set1.orig/QsxksxrQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set1.orig/QsxksapQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set1.orig/QsxksidQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=sxksid -train=NA -stim=sxksxr cTRACE/data_trace_ghd_set1.orig/QsxksxrQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=sxksid -train=NA -stim=sxksap cTRACE/data_trace_ghd_set1.orig/QsxksapQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=sxksid -train=NA -stim=sxksid cTRACE/data_trace_ghd_set1.orig/QsxksidQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=i -actual=x cTRACE/data_trace_ghd_set1.train/QsxksxrQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=i -actual=a cTRACE/data_trace_ghd_set1.train/QsxksapQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=i -actual=i cTRACE/data_trace_ghd_set1.train/QsxksidQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set1.train/QsxksxrQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set1.train/QsxksapQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set1.train/QsxksidQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=sxksid -train=sxksxr -stim=sxksxr cTRACE/data_trace_ghd_set1.train/QsxksxrQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=sxksid -train=sxksxr -stim=sxksap cTRACE/data_trace_ghd_set1.train/QsxksapQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=sxksid -train=sxksxr -stim=sxksid cTRACE/data_trace_ghd_set1.train/QsxksidQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=x -actual=u cTRACE/data_trace_ghd_set1.orig/QsikrusQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=x -actual=i cTRACE/data_trace_ghd_set1.orig/QsikrigQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set1.orig/QsikrxtQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set1.orig/QsikrusQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set1.orig/QsikrigQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set1.orig/QsikrxtQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=sikrxt -train=NA -stim=sikrus cTRACE/data_trace_ghd_set1.orig/QsikrusQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=sikrxt -train=NA -stim=sikrig cTRACE/data_trace_ghd_set1.orig/QsikrigQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=sikrxt -train=NA -stim=sikrxt cTRACE/data_trace_ghd_set1.orig/QsikrxtQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=x -actual=u cTRACE/data_trace_ghd_set1.train/QsikrusQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=x -actual=i cTRACE/data_trace_ghd_set1.train/QsikrigQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set1.train/QsikrxtQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set1.train/QsikrusQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set1.train/QsikrigQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set1.train/QsikrxtQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=sikrxt -train=sikrus -stim=sikrus cTRACE/data_trace_ghd_set1.train/QsikrusQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=sikrxt -train=sikrus -stim=sikrig cTRACE/data_trace_ghd_set1.train/QsikrigQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=sikrxt -train=sikrus -stim=sikrxt cTRACE/data_trace_ghd_set1.train/QsikrxtQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=i -actual=x cTRACE/data_trace_ghd_set1.orig/QstxdxrQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=i -actual=a cTRACE/data_trace_ghd_set1.orig/QstxdahQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=i -actual=i cTRACE/data_trace_ghd_set1.orig/QstxdidQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set1.orig/QstxdxrQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set1.orig/QstxdahQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set1.orig/QstxdidQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=stxdid -train=NA -stim=stxdxr cTRACE/data_trace_ghd_set1.orig/QstxdxrQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=stxdid -train=NA -stim=stxdah cTRACE/data_trace_ghd_set1.orig/QstxdahQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=stxdid -train=NA -stim=stxdid cTRACE/data_trace_ghd_set1.orig/QstxdidQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=i -actual=x cTRACE/data_trace_ghd_set1.train/QstxdxrQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=i -actual=a cTRACE/data_trace_ghd_set1.train/QstxdahQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=i -actual=i cTRACE/data_trace_ghd_set1.train/QstxdidQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set1.train/QstxdxrQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set1.train/QstxdahQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set1.train/QstxdidQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=stxdid -train=stxdxr -stim=stxdxr cTRACE/data_trace_ghd_set1.train/QstxdxrQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=stxdid -train=stxdxr -stim=stxdah cTRACE/data_trace_ghd_set1.train/QstxdahQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=stxdid -train=stxdxr -stim=stxdid cTRACE/data_trace_ghd_set1.train/QstxdidQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=x -actual=i cTRACE/data_trace_ghd_set1.orig/QstupisQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=x -actual=a cTRACE/data_trace_ghd_set1.orig/QstupatQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set1.orig/QstupxdQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set1.orig/QstupisQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set1.orig/QstupatQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set1.orig/QstupxdQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=stupxd -train=NA -stim=stupis cTRACE/data_trace_ghd_set1.orig/QstupisQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=stupxd -train=NA -stim=stupat cTRACE/data_trace_ghd_set1.orig/QstupatQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=stupxd -train=NA -stim=stupxd cTRACE/data_trace_ghd_set1.orig/QstupxdQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=x -actual=i cTRACE/data_trace_ghd_set1.train/QstupisQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=x -actual=a cTRACE/data_trace_ghd_set1.train/QstupatQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set1.train/QstupxdQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set1.train/QstupisQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set1.train/QstupatQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set1.train/QstupxdQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=stupxd -train=stupis -stim=stupis cTRACE/data_trace_ghd_set1.train/QstupisQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=stupxd -train=stupis -stim=stupat cTRACE/data_trace_ghd_set1.train/QstupatQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=stupxd -train=stupis -stim=stupxd cTRACE/data_trace_ghd_set1.train/QstupxdQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=x -actual=i cTRACE/data_trace_ghd_set1.orig/QtargisQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=x -actual=a cTRACE/data_trace_ghd_set1.orig/QtargabQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set1.orig/QtargxtQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set1.orig/QtargisQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set1.orig/QtargabQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set1.orig/QtargxtQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=targxt -train=NA -stim=targis cTRACE/data_trace_ghd_set1.orig/QtargisQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=targxt -train=NA -stim=targab cTRACE/data_trace_ghd_set1.orig/QtargabQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=targxt -train=NA -stim=targxt cTRACE/data_trace_ghd_set1.orig/QtargxtQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=x -actual=i cTRACE/data_trace_ghd_set1.train/QtargisQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=x -actual=a cTRACE/data_trace_ghd_set1.train/QtargabQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set1.train/QtargxtQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set1.train/QtargisQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set1.train/QtargabQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set1.train/QtargxtQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=targxt -train=targis -stim=targis cTRACE/data_trace_ghd_set1.train/QtargisQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=targxt -train=targis -stim=targab cTRACE/data_trace_ghd_set1.train/QtargabQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=targxt -train=targis -stim=targxt cTRACE/data_trace_ghd_set1.train/QtargxtQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=x -actual=u cTRACE/data_trace_ghd_set1.orig/QtrxbutQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=x -actual=x cTRACE/data_trace_ghd_set1.orig/QtrxbxrQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set1.orig/QtrxbxlQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set1.orig/QtrxbutQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set1.orig/QtrxbxrQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set1.orig/QtrxbxlQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=trxbxl -train=NA -stim=trxbut cTRACE/data_trace_ghd_set1.orig/QtrxbutQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=trxbxl -train=NA -stim=trxbxr cTRACE/data_trace_ghd_set1.orig/QtrxbxrQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=trxbxl -train=NA -stim=trxbxl cTRACE/data_trace_ghd_set1.orig/QtrxbxlQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=x -actual=u cTRACE/data_trace_ghd_set1.train/QtrxbutQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=x -actual=x cTRACE/data_trace_ghd_set1.train/QtrxbxrQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set1.train/QtrxbxlQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set1.train/QtrxbutQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set1.train/QtrxbxrQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set1.train/QtrxbxlQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=trxbxl -train=trxbut -stim=trxbut cTRACE/data_trace_ghd_set1.train/QtrxbutQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=trxbxl -train=trxbut -stim=trxbxr cTRACE/data_trace_ghd_set1.train/QtrxbxrQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=trxbxl -train=trxbut -stim=trxbxl cTRACE/data_trace_ghd_set1.train/QtrxbxlQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=t -actual=r cTRACE/data_trace_ghd_set1.orig/QtrxsrxQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=t -actual=b cTRACE/data_trace_ghd_set1.orig/QtrxsbaQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=t -actual=t cTRACE/data_trace_ghd_set1.orig/QtrxstiQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set1.orig/QtrxsrxQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set1.orig/QtrxsbaQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set1.orig/QtrxstiQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=trxsti -train=NA -stim=trxsrx cTRACE/data_trace_ghd_set1.orig/QtrxsrxQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=trxsti -train=NA -stim=trxsba cTRACE/data_trace_ghd_set1.orig/QtrxsbaQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=trxsti -train=NA -stim=trxsti cTRACE/data_trace_ghd_set1.orig/QtrxstiQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=t -actual=r cTRACE/data_trace_ghd_set1.train/QtrxsrxQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=t -actual=b cTRACE/data_trace_ghd_set1.train/QtrxsbaQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=t -actual=t cTRACE/data_trace_ghd_set1.train/QtrxstiQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set1.train/QtrxsrxQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set1.train/QtrxsbaQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set1.train/QtrxstiQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=trxsti -train=trxsrx -stim=trxsrx cTRACE/data_trace_ghd_set1.train/QtrxsrxQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=trxsti -train=trxsrx -stim=trxsba cTRACE/data_trace_ghd_set1.train/QtrxsbaQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=trxsti -train=trxsrx -stim=trxsti cTRACE/data_trace_ghd_set1.train/QtrxstiQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=p -actual=l cTRACE/data_trace_ghd_set2.orig/QxbrxlbQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=p -actual=g cTRACE/data_trace_ghd_set2.orig/QxbrxgsQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=p -actual=p cTRACE/data_trace_ghd_set2.orig/QxbrxptQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set2.orig/QxbrxlbQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set2.orig/QxbrxgsQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set2.orig/QxbrxptQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=xbrxpt -train=NA -stim=xbrxlb cTRACE/data_trace_ghd_set2.orig/QxbrxlbQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=xbrxpt -train=NA -stim=xbrxgs cTRACE/data_trace_ghd_set2.orig/QxbrxgsQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=xbrxpt -train=NA -stim=xbrxpt cTRACE/data_trace_ghd_set2.orig/QxbrxptQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=p -actual=l cTRACE/data_trace_ghd_set2.train/QxbrxlbQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=p -actual=g cTRACE/data_trace_ghd_set2.train/QxbrxgsQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=p -actual=p cTRACE/data_trace_ghd_set2.train/QxbrxptQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set2.train/QxbrxlbQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set2.train/QxbrxgsQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set2.train/QxbrxptQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=xbrxpt -train=xbrxlb -stim=xbrxlb cTRACE/data_trace_ghd_set2.train/QxbrxlbQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=xbrxpt -train=xbrxlb -stim=xbrxgs cTRACE/data_trace_ghd_set2.train/QxbrxgsQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=xbrxpt -train=xbrxlb -stim=xbrxpt cTRACE/data_trace_ghd_set2.train/QxbrxptQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=s -actual=h cTRACE/data_trace_ghd_set2.orig/QartxhaQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=s -actual=r cTRACE/data_trace_ghd_set2.orig/QartxrgQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=s -actual=s cTRACE/data_trace_ghd_set2.orig/QartxstQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set2.orig/QartxhaQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set2.orig/QartxrgQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set2.orig/QartxstQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=artxst -train=NA -stim=artxha cTRACE/data_trace_ghd_set2.orig/QartxhaQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=artxst -train=NA -stim=artxrg cTRACE/data_trace_ghd_set2.orig/QartxrgQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=artxst -train=NA -stim=artxst cTRACE/data_trace_ghd_set2.orig/QartxstQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=s -actual=h cTRACE/data_trace_ghd_set2.train/QartxhaQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=s -actual=r cTRACE/data_trace_ghd_set2.train/QartxrgQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=s -actual=s cTRACE/data_trace_ghd_set2.train/QartxstQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set2.train/QartxhaQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set2.train/QartxrgQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set2.train/QartxstQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=artxst -train=artxha -stim=artxha cTRACE/data_trace_ghd_set2.train/QartxhaQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=artxst -train=artxha -stim=artxrg cTRACE/data_trace_ghd_set2.train/QartxrgQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=artxst -train=artxha -stim=artxst cTRACE/data_trace_ghd_set2.train/QartxstQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=x -actual=a cTRACE/data_trace_ghd_set2.orig/QkarpadQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=x -actual=u cTRACE/data_trace_ghd_set2.orig/QkarpusQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set2.orig/QkarpxtQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set2.orig/QkarpadQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set2.orig/QkarpusQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set2.orig/QkarpxtQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=karpxt -train=NA -stim=karpad cTRACE/data_trace_ghd_set2.orig/QkarpadQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=karpxt -train=NA -stim=karpus cTRACE/data_trace_ghd_set2.orig/QkarpusQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=karpxt -train=NA -stim=karpxt cTRACE/data_trace_ghd_set2.orig/QkarpxtQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=x -actual=a cTRACE/data_trace_ghd_set2.train/QkarpadQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=x -actual=u cTRACE/data_trace_ghd_set2.train/QkarpusQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set2.train/QkarpxtQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set2.train/QkarpadQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set2.train/QkarpusQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set2.train/QkarpxtQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=karpxt -train=karpad -stim=karpad cTRACE/data_trace_ghd_set2.train/QkarpadQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=karpxt -train=karpad -stim=karpus cTRACE/data_trace_ghd_set2.train/QkarpusQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=karpxt -train=karpad -stim=karpxt cTRACE/data_trace_ghd_set2.train/QkarpxtQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=x -actual=u cTRACE/data_trace_ghd_set2.orig/QkruhusQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=x -actual=a cTRACE/data_trace_ghd_set2.orig/QkruhatQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set2.orig/QkruhxlQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set2.orig/QkruhusQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set2.orig/QkruhatQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set2.orig/QkruhxlQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=kruhxl -train=NA -stim=kruhus cTRACE/data_trace_ghd_set2.orig/QkruhusQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=kruhxl -train=NA -stim=kruhat cTRACE/data_trace_ghd_set2.orig/QkruhatQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=kruhxl -train=NA -stim=kruhxl cTRACE/data_trace_ghd_set2.orig/QkruhxlQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=x -actual=u cTRACE/data_trace_ghd_set2.train/QkruhusQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=x -actual=a cTRACE/data_trace_ghd_set2.train/QkruhatQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set2.train/QkruhxlQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set2.train/QkruhusQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set2.train/QkruhatQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set2.train/QkruhxlQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=kruhxl -train=kruhus -stim=kruhus cTRACE/data_trace_ghd_set2.train/QkruhusQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=kruhxl -train=kruhus -stim=kruhat cTRACE/data_trace_ghd_set2.train/QkruhatQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=kruhxl -train=kruhus -stim=kruhxl cTRACE/data_trace_ghd_set2.train/QkruhxlQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=s -actual=r cTRACE/data_trace_ghd_set2.orig/QpalxraQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=s -actual=b cTRACE/data_trace_ghd_set2.orig/QpalxbuQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=s -actual=s cTRACE/data_trace_ghd_set2.orig/QpalxsiQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set2.orig/QpalxraQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set2.orig/QpalxbuQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set2.orig/QpalxsiQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=palxsi -train=NA -stim=palxra cTRACE/data_trace_ghd_set2.orig/QpalxraQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=palxsi -train=NA -stim=palxbu cTRACE/data_trace_ghd_set2.orig/QpalxbuQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=palxsi -train=NA -stim=palxsi cTRACE/data_trace_ghd_set2.orig/QpalxsiQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=s -actual=r cTRACE/data_trace_ghd_set2.train/QpalxraQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=s -actual=b cTRACE/data_trace_ghd_set2.train/QpalxbuQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=s -actual=s cTRACE/data_trace_ghd_set2.train/QpalxsiQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set2.train/QpalxraQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set2.train/QpalxbuQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set2.train/QpalxsiQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=palxsi -train=palxra -stim=palxra cTRACE/data_trace_ghd_set2.train/QpalxraQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=palxsi -train=palxra -stim=palxbu cTRACE/data_trace_ghd_set2.train/QpalxbuQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=palxsi -train=palxra -stim=palxsi cTRACE/data_trace_ghd_set2.train/QpalxsiQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=x -actual=i cTRACE/data_trace_ghd_set2.orig/QparhibQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=x -actual=u cTRACE/data_trace_ghd_set2.orig/QparhutQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set2.orig/QparhxlQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set2.orig/QparhibQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set2.orig/QparhutQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set2.orig/QparhxlQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=parhxl -train=NA -stim=parhib cTRACE/data_trace_ghd_set2.orig/QparhibQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=parhxl -train=NA -stim=parhut cTRACE/data_trace_ghd_set2.orig/QparhutQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=parhxl -train=NA -stim=parhxl cTRACE/data_trace_ghd_set2.orig/QparhxlQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=x -actual=i cTRACE/data_trace_ghd_set2.train/QparhibQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=x -actual=u cTRACE/data_trace_ghd_set2.train/QparhutQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set2.train/QparhxlQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set2.train/QparhibQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set2.train/QparhutQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set2.train/QparhxlQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=parhxl -train=parhib -stim=parhib cTRACE/data_trace_ghd_set2.train/QparhibQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=parhxl -train=parhib -stim=parhut cTRACE/data_trace_ghd_set2.train/QparhutQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=parhxl -train=parhib -stim=parhxl cTRACE/data_trace_ghd_set2.train/QparhxlQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=l -actual=s cTRACE/data_trace_ghd_set2.orig/QpartsaQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=l -actual=k cTRACE/data_trace_ghd_set2.orig/QpartkxQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=l -actual=l cTRACE/data_trace_ghd_set2.orig/QpartliQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set2.orig/QpartsaQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set2.orig/QpartkxQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set2.orig/QpartliQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=partli -train=NA -stim=partsa cTRACE/data_trace_ghd_set2.orig/QpartsaQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=partli -train=NA -stim=partkx cTRACE/data_trace_ghd_set2.orig/QpartkxQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=partli -train=NA -stim=partli cTRACE/data_trace_ghd_set2.orig/QpartliQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=l -actual=s cTRACE/data_trace_ghd_set2.train/QpartsaQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=l -actual=k cTRACE/data_trace_ghd_set2.train/QpartkxQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=l -actual=l cTRACE/data_trace_ghd_set2.train/QpartliQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set2.train/QpartsaQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set2.train/QpartkxQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set2.train/QpartliQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=partli -train=partsa -stim=partsa cTRACE/data_trace_ghd_set2.train/QpartsaQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=partli -train=partsa -stim=partkx cTRACE/data_trace_ghd_set2.train/QpartkxQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=partli -train=partsa -stim=partli cTRACE/data_trace_ghd_set2.train/QpartliQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=u -actual=x cTRACE/data_trace_ghd_set2.orig/QpradxlQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=u -actual=i cTRACE/data_trace_ghd_set2.orig/QpradigQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=u -actual=u cTRACE/data_trace_ghd_set2.orig/QpradusQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set2.orig/QpradxlQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set2.orig/QpradigQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set2.orig/QpradusQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=pradus -train=NA -stim=pradxl cTRACE/data_trace_ghd_set2.orig/QpradxlQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=pradus -train=NA -stim=pradig cTRACE/data_trace_ghd_set2.orig/QpradigQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=pradus -train=NA -stim=pradus cTRACE/data_trace_ghd_set2.orig/QpradusQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=u -actual=x cTRACE/data_trace_ghd_set2.train/QpradxlQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=u -actual=i cTRACE/data_trace_ghd_set2.train/QpradigQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=u -actual=u cTRACE/data_trace_ghd_set2.train/QpradusQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set2.train/QpradxlQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set2.train/QpradigQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set2.train/QpradusQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=pradus -train=pradxl -stim=pradxl cTRACE/data_trace_ghd_set2.train/QpradxlQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=pradus -train=pradxl -stim=pradig cTRACE/data_trace_ghd_set2.train/QpradigQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=pradus -train=pradxl -stim=pradus cTRACE/data_trace_ghd_set2.train/QpradusQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=i -actual=a cTRACE/data_trace_ghd_set2.orig/QsxksapQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=i -actual=x cTRACE/data_trace_ghd_set2.orig/QsxksxrQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=i -actual=i cTRACE/data_trace_ghd_set2.orig/QsxksidQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set2.orig/QsxksapQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set2.orig/QsxksxrQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set2.orig/QsxksidQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=sxksid -train=NA -stim=sxksap cTRACE/data_trace_ghd_set2.orig/QsxksapQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=sxksid -train=NA -stim=sxksxr cTRACE/data_trace_ghd_set2.orig/QsxksxrQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=sxksid -train=NA -stim=sxksid cTRACE/data_trace_ghd_set2.orig/QsxksidQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=i -actual=a cTRACE/data_trace_ghd_set2.train/QsxksapQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=i -actual=x cTRACE/data_trace_ghd_set2.train/QsxksxrQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=i -actual=i cTRACE/data_trace_ghd_set2.train/QsxksidQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set2.train/QsxksapQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set2.train/QsxksxrQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set2.train/QsxksidQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=sxksid -train=sxksap -stim=sxksap cTRACE/data_trace_ghd_set2.train/QsxksapQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=sxksid -train=sxksap -stim=sxksxr cTRACE/data_trace_ghd_set2.train/QsxksxrQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=sxksid -train=sxksap -stim=sxksid cTRACE/data_trace_ghd_set2.train/QsxksidQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=x -actual=i cTRACE/data_trace_ghd_set2.orig/QsikrigQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=x -actual=u cTRACE/data_trace_ghd_set2.orig/QsikrusQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set2.orig/QsikrxtQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set2.orig/QsikrigQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set2.orig/QsikrusQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set2.orig/QsikrxtQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=sikrxt -train=NA -stim=sikrig cTRACE/data_trace_ghd_set2.orig/QsikrigQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=sikrxt -train=NA -stim=sikrus cTRACE/data_trace_ghd_set2.orig/QsikrusQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=sikrxt -train=NA -stim=sikrxt cTRACE/data_trace_ghd_set2.orig/QsikrxtQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=x -actual=i cTRACE/data_trace_ghd_set2.train/QsikrigQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=x -actual=u cTRACE/data_trace_ghd_set2.train/QsikrusQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set2.train/QsikrxtQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set2.train/QsikrigQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set2.train/QsikrusQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set2.train/QsikrxtQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=sikrxt -train=sikrig -stim=sikrig cTRACE/data_trace_ghd_set2.train/QsikrigQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=sikrxt -train=sikrig -stim=sikrus cTRACE/data_trace_ghd_set2.train/QsikrusQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=sikrxt -train=sikrig -stim=sikrxt cTRACE/data_trace_ghd_set2.train/QsikrxtQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=i -actual=a cTRACE/data_trace_ghd_set2.orig/QstxdahQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=i -actual=x cTRACE/data_trace_ghd_set2.orig/QstxdxrQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=i -actual=i cTRACE/data_trace_ghd_set2.orig/QstxdidQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set2.orig/QstxdahQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set2.orig/QstxdxrQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set2.orig/QstxdidQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=stxdid -train=NA -stim=stxdah cTRACE/data_trace_ghd_set2.orig/QstxdahQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=stxdid -train=NA -stim=stxdxr cTRACE/data_trace_ghd_set2.orig/QstxdxrQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=stxdid -train=NA -stim=stxdid cTRACE/data_trace_ghd_set2.orig/QstxdidQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=i -actual=a cTRACE/data_trace_ghd_set2.train/QstxdahQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=i -actual=x cTRACE/data_trace_ghd_set2.train/QstxdxrQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=i -actual=i cTRACE/data_trace_ghd_set2.train/QstxdidQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set2.train/QstxdahQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set2.train/QstxdxrQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set2.train/QstxdidQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=stxdid -train=stxdah -stim=stxdah cTRACE/data_trace_ghd_set2.train/QstxdahQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=stxdid -train=stxdah -stim=stxdxr cTRACE/data_trace_ghd_set2.train/QstxdxrQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=stxdid -train=stxdah -stim=stxdid cTRACE/data_trace_ghd_set2.train/QstxdidQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=x -actual=a cTRACE/data_trace_ghd_set2.orig/QstupatQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=x -actual=i cTRACE/data_trace_ghd_set2.orig/QstupisQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set2.orig/QstupxdQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set2.orig/QstupatQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set2.orig/QstupisQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set2.orig/QstupxdQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=stupxd -train=NA -stim=stupat cTRACE/data_trace_ghd_set2.orig/QstupatQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=stupxd -train=NA -stim=stupis cTRACE/data_trace_ghd_set2.orig/QstupisQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=stupxd -train=NA -stim=stupxd cTRACE/data_trace_ghd_set2.orig/QstupxdQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=x -actual=a cTRACE/data_trace_ghd_set2.train/QstupatQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=x -actual=i cTRACE/data_trace_ghd_set2.train/QstupisQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set2.train/QstupxdQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set2.train/QstupatQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set2.train/QstupisQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set2.train/QstupxdQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=stupxd -train=stupat -stim=stupat cTRACE/data_trace_ghd_set2.train/QstupatQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=stupxd -train=stupat -stim=stupis cTRACE/data_trace_ghd_set2.train/QstupisQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=stupxd -train=stupat -stim=stupxd cTRACE/data_trace_ghd_set2.train/QstupxdQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=x -actual=a cTRACE/data_trace_ghd_set2.orig/QtargabQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=x -actual=i cTRACE/data_trace_ghd_set2.orig/QtargisQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set2.orig/QtargxtQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set2.orig/QtargabQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set2.orig/QtargisQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set2.orig/QtargxtQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=targxt -train=NA -stim=targab cTRACE/data_trace_ghd_set2.orig/QtargabQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=targxt -train=NA -stim=targis cTRACE/data_trace_ghd_set2.orig/QtargisQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=targxt -train=NA -stim=targxt cTRACE/data_trace_ghd_set2.orig/QtargxtQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=x -actual=a cTRACE/data_trace_ghd_set2.train/QtargabQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=x -actual=i cTRACE/data_trace_ghd_set2.train/QtargisQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set2.train/QtargxtQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set2.train/QtargabQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set2.train/QtargisQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set2.train/QtargxtQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=targxt -train=targab -stim=targab cTRACE/data_trace_ghd_set2.train/QtargabQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=targxt -train=targab -stim=targis cTRACE/data_trace_ghd_set2.train/QtargisQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=targxt -train=targab -stim=targxt cTRACE/data_trace_ghd_set2.train/QtargxtQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=x -actual=x cTRACE/data_trace_ghd_set2.orig/QtrxbxrQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=x -actual=u cTRACE/data_trace_ghd_set2.orig/QtrxbutQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set2.orig/QtrxbxlQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set2.orig/QtrxbxrQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set2.orig/QtrxbutQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set2.orig/QtrxbxlQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=trxbxl -train=NA -stim=trxbxr cTRACE/data_trace_ghd_set2.orig/QtrxbxrQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=trxbxl -train=NA -stim=trxbut cTRACE/data_trace_ghd_set2.orig/QtrxbutQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=trxbxl -train=NA -stim=trxbxl cTRACE/data_trace_ghd_set2.orig/QtrxbxlQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=x -actual=x cTRACE/data_trace_ghd_set2.train/QtrxbxrQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=x -actual=u cTRACE/data_trace_ghd_set2.train/QtrxbutQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=x -actual=x cTRACE/data_trace_ghd_set2.train/QtrxbxlQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set2.train/QtrxbxrQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set2.train/QtrxbutQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set2.train/QtrxbxlQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=trxbxl -train=trxbxr -stim=trxbxr cTRACE/data_trace_ghd_set2.train/QtrxbxrQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=trxbxl -train=trxbxr -stim=trxbut cTRACE/data_trace_ghd_set2.train/QtrxbutQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=trxbxl -train=trxbxr -stim=trxbxl cTRACE/data_trace_ghd_set2.train/QtrxbxlQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=TRAIN -expect=t -actual=b cTRACE/data_trace_ghd_set2.orig/QtrxsbaQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=NON   -expect=t -actual=r cTRACE/data_trace_ghd_set2.orig/QtrxsrxQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=PRE  -cat=WORD  -expect=t -actual=t cTRACE/data_trace_ghd_set2.orig/QtrxstiQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=TRAIN cTRACE/data_trace_ghd_set2.orig/QtrxsbaQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=NON   cTRACE/data_trace_ghd_set2.orig/QtrxsrxQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=PRE  -cat=WORD  cTRACE/data_trace_ghd_set2.orig/QtrxstiQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=TRAIN -word=trxsti -train=NA -stim=trxsba cTRACE/data_trace_ghd_set2.orig/QtrxsbaQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=NON   -word=trxsti -train=NA -stim=trxsrx cTRACE/data_trace_ghd_set2.orig/QtrxsrxQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=PRE -input=WORD  -word=trxsti -train=NA -stim=trxsti cTRACE/data_trace_ghd_set2.orig/QtrxstiQ_word.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=TRAIN -expect=t -actual=b cTRACE/data_trace_ghd_set2.train/QtrxsbaQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=NON   -expect=t -actual=r cTRACE/data_trace_ghd_set2.train/QtrxsrxQ_phon.txt
+SCRIPTS/ctrace_get_specified_phones.pl -lab=POST -cat=WORD  -expect=t -actual=t cTRACE/data_trace_ghd_set2.train/QtrxstiQ_phon.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=TRAIN cTRACE/data_trace_ghd_set2.train/QtrxsbaQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=NON   cTRACE/data_trace_ghd_set2.train/QtrxsrxQ_comp.txt
+SCRIPTS/ctrace_combine_activities.pl   -lab=POST -cat=WORD  cTRACE/data_trace_ghd_set2.train/QtrxstiQ_comp.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=TRAIN -word=trxsti -train=trxsba -stim=trxsba cTRACE/data_trace_ghd_set2.train/QtrxsbaQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=NON   -word=trxsti -train=trxsba -stim=trxsrx cTRACE/data_trace_ghd_set2.train/QtrxsrxQ_word.txt
+SCRIPTS/ctrace_get_specified_words.pl  -lab=POST -input=WORD  -word=trxsti -train=trxsba -stim=trxsti cTRACE/data_trace_ghd_set2.train/QtrxstiQ_word.txt
