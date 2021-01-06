@@ -1,0 +1,30 @@
+
+echo "# this perl script will call other perl scripts"
+echo "# to do all of the TRACE output analysis"
+
+# this perl script will call other perl scripts
+# do do all of the TRACE output analysis
+
+echo "SCRIPTS/trace_ghd_analyzer.pl trace_ghd_items.set?.txt > trace_analyzer_output.txt"
+SCRIPTS/trace_ghd_analyzer.pl -path=cTRACE -it=trace_ghd cTRACE/trace_ghd_items.set?.txt > trace_analyzer_output.txt
+
+echo ""
+
+# create header for combined file
+echo "SCRIPTS/create_comb_header.pl > GHD_TRACE/trace_ghd_comb_out.txt"
+SCRIPTS/create_comb_header.pl > GHD_TRACE/trace_ghd_comb_out.txt
+
+echo ""
+
+echo "# now we aggregate the data"
+# now we aggregate the data
+
+
+echo "cat cTRACE/data_trace_ghd_set*/*phon*slice* > GHD_TRACE/trace_ghd_phone_out.txt"
+cat cTRACE/data_trace_ghd_set*/*phon*slice* > GHD_TRACE/trace_ghd_phone_out.txt
+
+echo "cat cTRACE/data_trace_ghd_set*/*tocomb*     >> GHD_TRACE/trace_ghd_comb_out.txt"
+cat cTRACE/data_trace_ghd_set*/*tocomb*     >> GHD_TRACE/trace_ghd_comb_out.txt
+
+echo "cat cTRACE/data_trace_ghd_set*/*wrdslice*   > GHD_TRACE/trace_ghd_lex_out.txt"
+cat cTRACE/data_trace_ghd_set*/*wrdslice*   > GHD_TRACE/trace_ghd_lex_out.txt

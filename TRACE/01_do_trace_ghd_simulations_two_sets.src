@@ -1,0 +1,33 @@
+# GENERATE OTHER VERSIONS OF SLEX
+echo "Step 1/9: CONSTRUCT lexicons from items file"
+rm cTRACE/trace_ghd_items.set*
+# -simpler means only do sets 1 and 2
+SCRIPTS/trace_ghd_make_lexicons.pl -path=cTRACE -lex=LEX/slex_base_ghd -items=trace_ghd_items.txt -simpler
+
+
+# GENERATE .TRACEIN FILES FOR TRACE SIMULATIONS
+echo "Step 2/9: GENERATE .tracein FILES FOR TRACE SIMULATIONS"
+SCRIPTS/trace_ghd_make_tracein_files.pl -path=cTRACE cTRACE/trace_ghd_items.set?.txt
+
+# CLEAR OLD DATA -- note that this happens without warning
+echo "Step 3/9: CLEAR OLD DATA -- note that this happens without warning"
+rm -rf cTRACE/data cTRACE/data_trace_ghd_*
+
+# We could run all the simulations in go, but it would take a long
+# time. So we break it up for the user as 6 separate sets of simulations.
+
+echo ""
+echo "** About to do 2 sets of simulations **"
+echo ""
+
+# DO SIMULATION 1
+echo "Step 4/9: orig and train simulations for set1"
+SCRIPTS/trace_ghd_do_sims.pl -path=cTRACE trace_ghd_set1.orig.tracein trace_ghd_set1.train.tracein
+
+# DO SIMULATION 2
+echo "Step 5/9: orig and train simulations for set2"
+SCRIPTS/trace_ghd_do_sims.pl -path=cTRACE trace_ghd_set2.orig.tracein trace_ghd_set2.train.tracein
+
+echo ""
+echo "** Simulations complete **"
+echo ""

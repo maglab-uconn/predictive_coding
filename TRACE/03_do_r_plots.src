@@ -1,0 +1,37 @@
+echo " --------------------------------------------------------------"
+echo " -- Step 1/2: a script installs required packages if missing --"
+echo " --------------------------------------------------------------"
+# first, we run a script that installs required packages if we do not have them
+Rscript SCRIPTS/check_packages.R
+
+echo ""
+echo " ---------------------------------------------------"
+echo " -- Step 2/2: a script that generates TRACE plots --"
+echo " ---------------------------------------------------"
+# then, we run a script that generates TRACE plots
+Rscript SCRIPTS/ghd_trace_plots.R
+
+#echo ""
+#echo " -------------------------------------------------"
+#echo " -- Step 3/4: a script that generates SRN plots --"
+#echo " -------------------------------------------------"
+## then, we run a script that generates SRN plots
+#Rscript SCRIPTS/ghd_srn_plots.R
+## cannot get grid.arrange not to create Rplots.pdf, so remove it
+#rm Rplots.pdf 
+#echo ""
+#echo " ------------------------------------------------------------"
+#echo " -- Step 4/4: a script that generates PREDICTIVE COHORT plots"
+#echo " ------------------------------------------------------------"
+## then, we run a script that generates PREDICTIVE COHORT plots
+#Rscript SCRIPTS/ghd_predictive_cohort_plots.R
+
+echo "Removing Rplots.pdf"
+rm Rplots.pdf
+
+echo ""
+echo " ------------------------------------------"
+echo " --                 Done                 -- "
+echo " ------------------------------------------"
+echo ""
+
