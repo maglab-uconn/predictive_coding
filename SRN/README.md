@@ -133,8 +133,8 @@
                 * Determine the suffix of exported file name
 
     * Result example  
-    <img src= './Figures/SRN.Activation.Example.png' width= 30% height= 30% />
-    <img src= './Figures/SRN.MSE.Example.png' width= 31.7% height= 31.7% />
+    <img src= './SRN.Activation.Example.png' width= 30% height= 30% />
+    <img src= './SRN.MSE.Example.png' width= 31.7% height= 31.7% />
 
 
 7. Phase test
