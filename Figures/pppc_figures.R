@@ -155,7 +155,7 @@ fig1B <- ggplot(ghd.err , aes(position_DP, Error,
                               color = TYPE, shape = TYPE, linetype = TYPE)) +
   facet_grid(. ~PHASE) +
   xlab("Position relative to DP") +
-  ylab("Error") +
+  ylab("Prediction Error") +
   scale_x_continuous(limits = c(-2.5, 2.5)) +
   scale_y_continuous(limits = c(-0.01, 2.38),
                      breaks =  pretty_breaks()) +
