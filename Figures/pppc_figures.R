@@ -113,8 +113,8 @@ fig1A <- ggplot(ghd.prob, aes(position_DP, Probability,
   geom_line(size = rel(1)) +
   geom_point(size = rel(5)) +
   scale_shape_manual(values = c(15, 16, 2)) +
-  scale_color_manual(values = c("#19c986", "#ffb520", "#c71993", "#ffb520")) +
-  scale_linetype_manual(values = c("solid", "solid", "solid", "dashed")) +
+  scale_color_manual(values = c("#19c986", "#C93419","#5119C9")) +
+  scale_linetype_manual(values = c("solid", "solid", "solid")) +
   geom_vline(xintercept = 0.5, linetype = "dotted", size = rel(0.5), color = "darkblue")
 
 # set up labels
@@ -131,8 +131,8 @@ labels <- data.frame(position_DP = rep(c(-2.45, -2, -1, 0, 1, 2,
                                   "b", "o", "t", "i"), 2),
                      color = rep(c("darkgrey",
                                    rep("#19c986", 5),
-                                   rep("#ffb520", 2),
-                                   rep("#c71993", 2)), 2),
+                                   rep("#C93419", 2),
+                                   rep("#5119C9", 2)), 2),
                      fontface = rep(c("plain", rep("bold", 9)), 2),
                      size = rep(c(rel(9),
                                   rep(rel(9), 9)), 2))
@@ -183,8 +183,8 @@ fig1B <- ggplot(ghd.err , aes(position_DP, Error,
   geom_line(size = rel(1)) +
   geom_point(size = rel(5)) +
   scale_shape_manual(values = c(15, 16, 2)) +
-  scale_color_manual(values = c("#19c986", "#ffb520", "#c71993", "#ffb520")) +
-  scale_linetype_manual(values = c("solid", "solid", "solid", "dashed")) +
+  scale_color_manual(values = c("#19c986", "#C93419","#5119C9")) +
+  scale_linetype_manual(values = c("solid", "solid", "solid")) +
   geom_vline(xintercept = 0.5, linetype = "dotted", size = rel(0.5), color = "darkblue")
 
 # update labels
@@ -201,8 +201,8 @@ labels <- data.frame(position_DP = rep(c(-2.45, -2, -1, 0, 1, 2,
                                   "b", "o", "t", "i"), 2),
                      color = rep(c("darkgrey",
                                    rep("#19c986", 5),
-                                   rep("#ffb520", 2),
-                                   rep("#c71993", 2)), 2),
+                                   rep("#C93419", 2),
+                                   rep("#5119C9", 2)), 2),
                      fontface = rep(c("plain", rep("bold", 9)), 2),
                      size = rep(c(rel(9),
                                   rep(rel(9), 9)), 2))
@@ -337,8 +337,8 @@ labels <- data.frame(position_DP = rep(c(-2.45, -2, -1, 0, 1, 2,
                                   "b", "o", "t", "i"), 2),
                      color = rep(c("darkgrey",
                                    rep("#19c986", 5),
-                                   rep("#ffb520", 2),
-                                   rep("#c71993", 2)), 2),
+                                   rep("#C93419", 2),
+                                   rep("#5119C9", 2)), 2),
                      fontface = rep(c("plain", rep("bold", 9)), 2),
                      size = rep(c(rel(9),
                                   rep(rel(9), 9)), 2))
@@ -377,8 +377,8 @@ figS2A <-
   geom_line(size = rel(1)) +
   geom_point(size = rel(5)) +
   scale_shape_manual(values = c(15, 16, 2)) +
-  scale_color_manual(values = c("#19c986", "#ffb520", "#c71993", "#ffb520")) +
-  scale_linetype_manual(values = c("solid", "solid", "solid", "dashed")) +
+  scale_color_manual(values = c("#19c986", "#C93419", "#5119C9")) +
+  scale_linetype_manual(values = c("solid", "solid", "solid")) +
   geom_vline(xintercept = 0.5, linetype = "dotted", size = rel(0.5), color = "darkblue")
 
 
@@ -411,8 +411,8 @@ labels <- data.frame(position_DP = rep(c(-2.45, -2, -1, 0, 1, 2,
                                   "b", "o", "t", "i"), 2),
                      color = rep(c("darkgrey",
                                    rep("#19c986", 5),
-                                   rep("#ffb520", 2),
-                                   rep("#c71993", 2)), 2),
+                                   rep("#C93419", 2),
+                                   rep("#5119C9", 2)), 2),
                      fontface = rep(c("plain", rep("bold", 9)), 2),
                      size = rep(c(rel(9),
                                   rep(rel(9), 9)), 2))
@@ -450,8 +450,8 @@ figS2B <-
   geom_line(size = rel(1)) +
   geom_point(size = rel(5)) +
   scale_shape_manual(values = c(15, 16, 2)) +
-  scale_color_manual(values = c("#19c986", "#ffb520", "#c71993", "#ffb520")) +
-  scale_linetype_manual(values = c("solid", "solid", "solid", "dashed")) +
+  scale_color_manual(values = c("#19c986", "#C93419","#5119C9")) +
+  scale_linetype_manual(values = c("solid", "solid", "solid")) +
   geom_vline(xintercept = 0.5, linetype = "dotted", size = rel(0.5), color = "darkblue")
 
 
@@ -483,7 +483,7 @@ names(trace_phon)=c("Cycle","Phase","Item","Type","File", "Phone","Act")
 trace_phon$Phase = factor(trace_phon$Phase, levels(trace_phon$Phase)[c(2,1)])
 levels(trace_phon$Phase)=c("Pre training", "Post training")
 levels(trace_phon$Item)=c("Baseline","Novel","Source") # more informative item labels
-levels(trace_phon$Type)=c("Replaced phoneme","Source phoneme   ") # more informative type labels
+levels(trace_phon$Type)=c("Replaced phoneme","Source phoneme    ") # more informative type labels
 trace_phon$Type = factor(trace_phon$Type, levels(trace_phon$Type)[c(2,1)])
 trace_phon$Condition = as.factor(paste(sep = " | ", trace_phon$Type, trace_phon$Item))
 
@@ -492,9 +492,9 @@ dsum<-ddply(trace_phon, c("Phase", "Condition", "Cycle"), summarise,
             Activation = mean(Act),
             sd = sd(Act),
             se = sd / sqrt(N))
-bluered=c("#19c986", "#ffb520","#c71993", "#ffb520", "#c71993")
+bluered=c("#19c986", "#C93419", "#5119C9","#C93419","#5119C9")
 rs=1.8
-shapeValues  = c(16, 20, 1, 2, 18)
+shapeValues  = c(20, 16, 19, 1, 0)
 #levels(dsum$Condition)
 #str(dsum)
 dsum$Condition=factor(dsum$Condition)
@@ -504,7 +504,7 @@ dsum$Condition = factor(dsum$Condition, levels(dsum$Condition)[c(5, 4, 3, 2, 1)]
 # Make plot
 fig2A = ggplot(dsum, aes(Cycle,Activation, group=Condition, color=Condition, shape=Condition, linetype=Condition) ) +
   geom_line() + #geom_text(aes(label = phon)) +
-  xlab("Time (TRACE cycles)") + ylab("Phoneme activation") +
+  xlab("Time (TRACE cycles)") + ylab("Phoneme activation") + ggtitle("Full timecourse") + 
   #  scale_x_continuous(limits = c(0, 101)) + #, breaks=c(0,10,20,30)) +
   #  scale_y_continuous(limits = c(-0.2, 0.66)) + #scale_shape_discrete(solid=T) + #geom_point(shape = a)
   coord_cartesian(ylim=c(-0.2, 0.66), xlim=c(0,101)) + 
@@ -512,7 +512,7 @@ fig2A = ggplot(dsum, aes(Cycle,Activation, group=Condition, color=Condition, sha
   #  scale_fill_discrete(name="Noise level") +
   scale_shape_manual(values=shapeValues) +                  # Change shapes
   scale_color_manual(values=bluered) +                  # Change colors
-  scale_linetype_manual(values = c("solid", "solid", "solid",  "dashed", "solid")) +
+  scale_linetype_manual(values = c("solid", "solid", "solid",  "longdash", "dashed")) +
   #  scale_linetype_manual(values=c(rep("solid",17))) +
   facet_grid(.~Phase) +
   theme(panel.background = element_rect(colour="black", fill="white"),
@@ -526,19 +526,44 @@ fig2A = ggplot(dsum, aes(Cycle,Activation, group=Condition, color=Condition, sha
         legend.title = element_blank(),
         #         legend.position = c(.1,.7),
         strip.text.x = element_text(size=rel(rs)),
-        legend.position = c(.5,.66),
+        legend.position = c(.5,.55),
         legend.background = element_rect(fill="white", colour="black"),
         panel.grid.major.y = element_line(colour = "grey", linetype = "dotted"),
         legend.key = element_blank()) +
   geom_vline(xintercept=32, linetype="dotted", size=0.5, color="red")
+
+labels <- data.frame(Cycle = c(45, 81, 81, 81, 81, 
+                               45, 81, 81, 45.5, 81),
+                     Activation = c(0.68, -0.11, 0.01, 0.57, 0.53,
+                                    0.68, -0.18, -0.03, 0.64, 0.57),
+                     Phase = c(rep("Pre training", 5),
+                               rep("Post training", 5)),
+                     Condition = rep(c("Source phoneme     | Source",
+                                       "Source phoneme     | Novel",
+                                       "Source phoneme     | Baseline",
+                                       "Replaced phoneme | Novel",
+                                       "Replaced phoneme | Baseline"), 2),
+                     text = rep(c("/l/ | /partli/",
+                                  "/l/ | /partk^/",
+                                  "/l/ | /partsa/",
+                                  "/k/ | /partk^/",
+                                  "/s/ | /partsa/"), 2))
+
+
+fig2A <- fig2A +
+  geom_text(data = labels,
+            label = labels$text,
+            size = rel(5.5),
+            fontface = "bold",
+            show.legend = FALSE)
 fig2A
-ggsave(plot=fig2A, filename="fig2A.png",
-       height = 12, width = 20,
+ggsave(plot = fig2A, filename="fig2A.png",
+       height = 6.6, width = 11,
        bg = "transparent")
 
 fig2B = ggplot(dsum, aes(Cycle,Activation, group=Condition, color=Condition, shape=Condition, linetype=Condition) ) +
   geom_line(position=position_dodge(width=0.2)) + #geom_text(aes(label = phon)) +
-  xlab("Time (TRACE cycles)") + ylab("Phoneme activation") +
+  xlab("Time (TRACE cycles)") + ylab("Phoneme activation") + ggtitle("Zoomed-in timecourse") +
   coord_cartesian(ylim=c(-.11,.21), xlim=c(15,45)) + 
   #scale_x_continuous(limits = c(15, 45)) + #, breaks=c(0,10,20,30)) +
   #scale_y_continuous(limits = c(-0.11, 0.11)) + #scale_shape_discrete(solid=T) + #geom_point(shape = a)
@@ -546,7 +571,7 @@ fig2B = ggplot(dsum, aes(Cycle,Activation, group=Condition, color=Condition, sha
   #  scale_fill_discrete(name="Noise level") +
   scale_shape_manual(values=shapeValues) +                  # Change shapes
   scale_color_manual(values=bluered) +                  # Change colors
-  scale_linetype_manual(values = c("solid", "solid", "solid",  "dashed", "solid")) +
+  scale_linetype_manual(values = c("solid", "solid", "solid",  "longdash", "dashed")) +
   #  scale_linetype_manual(values=c(rep("solid",17))) +
   facet_grid(.~Phase) +
   theme(panel.background = element_rect(colour="black", fill="white"),
@@ -564,9 +589,33 @@ fig2B = ggplot(dsum, aes(Cycle,Activation, group=Condition, color=Condition, sha
         panel.grid.major.y = element_line(colour = "grey", linetype = "dotted"),
         legend.key = element_blank()) +
   geom_vline(xintercept=32, linetype="dotted", size=0.5, color="red")
+
+labels <- data.frame(Cycle = c(30, 42.5, 42.5, 30, 30, 
+                               30, 42.5, 42.5, 30, 30),
+                     Activation = c(-0.025, 0.04, 0.025, -0.10, -0.115, 
+                                    -0.025, 0.04, 0.025, -0.04, -0.10),
+                     Phase = c(rep("Pre training", 5),
+                               rep("Post training", 5)),
+                     Condition = rep(c("Source phoneme     | Source",
+                                       "Source phoneme     | Novel",
+                                       "Source phoneme     | Baseline",
+                                       "Replaced phoneme | Novel",
+                                       "Replaced phoneme | Baseline"), 2),
+                     text = rep(c("/l/ | /partli/",
+                                  "/l/ | /partk^/",
+                                  "/l/ | /partsa/",
+                                  "/k/ | /partk^/",
+                                  "/s/ | /partsa/"), 2))
+
+fig2B <- fig2B +
+  geom_text(data = labels,
+            label = labels$text,
+            size = rel(5.5),
+            fontface = "bold",
+            show.legend = FALSE)
 fig2B
-ggsave(plot=fig2B, filename="fig2B.png",
-       height = 6, width = 10,
+ggsave(plot = fig2B, filename="fig2B.png",
+       height = 6.6, width = 11,
        bg = "transparent")
 
 # Fig 3: TRACE - Lexical Feedback  ----
@@ -586,7 +635,8 @@ lex.FB<-ddply(trace_comb, c("Phase", "Item", "Cycle"), summarise,
               sd = sd(WPsum),
               se = sd / sqrt(N)) # summarise total amount of feedback from word layer to phoneme layer over time
 
-# amount of feedback flowing from word to phoneme layer over time
+
+# Plot
 fig3 = ggplot(lex.FB, aes(Cycle,Feedback, group=Item, color=Item, shape=Item, linetype=Item) ) +
   geom_line(size=.5) + #geom_text(aes(label = phon)) +
   xlab("Time (TRACE cycles)") + ylab("Lexical feedback") +
@@ -616,6 +666,26 @@ fig3 = ggplot(lex.FB, aes(Cycle,Feedback, group=Item, color=Item, shape=Item, li
         panel.grid.major.y = element_line(colour = "grey", linetype = "dotted"),
         legend.key = element_blank()) +
   geom_vline(xintercept=32, linetype="dotted", size=0.5, color="red")  #       legend.key = element_blank()) +
+
+labels <- data.frame(Cycle = c(60, 60, 60,
+                               60, 60, 60),
+                     Feedback = c(0.27, 0.385, 0.41,
+                                  0.27, 0.295, 0.445),
+                     Phase = c(rep("Pre training", 3),
+                               rep("Post training", 3)),
+                     Item = rep(c("Source",
+                                  "Novel",
+                                  "Baseline"), 2),
+                     text = rep(c("/partli/",
+                                  "/partk^/",
+                                  "/partsa/"), 2))
+
+fig3 <- fig3 +
+  geom_text(data = labels,
+            label = labels$text,
+            size = rel(5.5),
+            fontface = "bold",
+            show.legend = FALSE)
 fig3
 ggsave(plot=fig3, filename="fig3.png",
        height = 6, width = 10,
@@ -656,6 +726,27 @@ fig4 = ggplot(lex.SUM, aes(Cycle,Competition, group=Item, color=Item, shape=Item
         panel.grid.major.y = element_line(colour = "grey", linetype = "dotted"),
         legend.key = element_blank()) +
   geom_vline(xintercept=32, linetype="dotted", size=0.5, color="red")
+
+labels <- data.frame(Cycle = c(87, 87, 87,
+                               87, 87, 87),
+                     Competition = c(-750, -625, -590,
+                                  -840, -805, -665),
+                     Phase = c(rep("Pre training", 3),
+                               rep("Post training", 3)),
+                     Item = rep(c("Source",
+                                  "Novel",
+                                  "Baseline"), 2),
+                     text = rep(c("/partli/",
+                                  "/partk^/",
+                                  "/partsa/"), 2))
+
+fig4 <- fig4 +
+  geom_text(data = labels,
+            label = labels$text,
+            size = rel(5.5),
+            fontface = "bold",
+            show.legend = FALSE)
+
 fig4
 ggsave(plot=fig4, filename="fig4.png",
        height = 6, width = 10,
@@ -696,6 +787,26 @@ fig5 = ggplot(phon.SUM, aes(Cycle,Competition, group=Item, color=Item, shape=Ite
         panel.grid.major.y = element_line(colour = "grey", linetype = "dotted"),
         legend.key = element_blank()) +
   geom_vline(xintercept=32, linetype="dotted", size=0.5, color="red")
+
+labels <- data.frame(Cycle = c(92, 92, 92,
+                               92, 92, 92),
+                     Competition = c(-74.75, -69.25, -68,
+                                     -74.75, -73.5, -69.25),
+                     Phase = c(rep("Pre training", 3),
+                               rep("Post training", 3)),
+                     Item = rep(c("Source",
+                                  "Novel",
+                                  "Baseline"), 2),
+                     text = rep(c("/partli/",
+                                  "/partk^/",
+                                  "/partsa/"), 2))
+
+fig5 <- fig5 +
+  geom_text(data = labels,
+            label = labels$text,
+            size = rel(5.5),
+            fontface = "bold",
+            show.legend = FALSE)
 fig5
 ggsave(plot=fig5, filename="fig5.png",
        height = 6, width = 10,
@@ -727,15 +838,16 @@ lex_source <-ddply(subset(trace_lex, Input == "Source" & Item == "Original"), c(
             se = sd / sqrt(N))
 
 # Make plot
-figS3 = ggplot(lex_source, aes(Cycle,Activation, group=Phase, color=Phase, linetype=Phase) ) +
+figS3 = ggplot(lex_source, aes(Cycle,Activation, group=Phase, color=Phase, linetype=Phase, shape = Phase) ) +
   geom_line(size = 1.5) + #geom_text(aes(label = phon)) +
-  geom_point(size = 2, data=subset(lex_source, Cycle %% 4 == 1), position=position_dodge(width=2)) +
+  geom_point(size = 3, data=subset(lex_source, Cycle %% 4 == 1), position=position_dodge(width=2)) +
   xlab("Time (TRACE cycles)") + ylab("Source word activation") +
   #  scale_x_continuous(limits = c(0, 101)) + #, breaks=c(0,10,20,30)) +
   #  scale_y_continuous(limits = c(-0.2, 0.66)) + #scale_shape_discrete(solid=T) + #geom_point(shape = a)
   coord_cartesian(ylim=c(0, 1), xlim=c(0,101)) +
-  scale_color_manual(values=c("#19c986", "#ffb520")) +                  # Change colors
-  scale_linetype_manual(values = c("solid", "solid")) +
+  scale_shape_manual(values=c(15,0)) +                  # Change shapes
+  scale_color_manual(values=c("#19c986", "#19c986")) +                  # Change colors
+  scale_linetype_manual(values = c("solid", "dashed")) +
   #  scale_linetype_manual(values=c(rep("solid",17))) +
   theme(panel.background = element_rect(colour="black", fill="white"),
         axis.text.x = element_text(size=rel(rs), face="plain"),
