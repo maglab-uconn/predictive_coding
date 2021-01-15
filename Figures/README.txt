@@ -1,6 +1,6 @@
 About the files in this folder
 
-pppc_figures.R is the R script used to generate the figures in our manuscript ("Does predictive processing imply predictive coding in models of spoken word recognition?").
+pppc_figures.R is the R script used to generate the figures in our manuscript ("Does signal reduction imply predictive coding in models of spoken word recognition?").
 
 This script reads in several data files, described briefly below:
 
